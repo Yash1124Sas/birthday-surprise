@@ -1,0 +1,246 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: 'Georgia', serif;
+    color: white;
+    background: linear-gradient(
+        135deg,
+        #18002e,
+        #54116b,
+        #a83279,
+        #230038
+    );
+    background-size: 300% 300%;
+    animation: gradientMove 10s ease infinite;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-shadow: 0 0 15px #ff8bd1;
+}
+
+p {
+    font-size: 1.2rem;
+    color: #ffd6ed;
+}
+
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+}
+
+.login-container {
+    width: 90%;
+    max-width: 450px;
+    padding: 40px 25px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 25px;
+    background: rgba(255, 255, 255, 0.10);
+    backdrop-filter: blur(15px);
+    box-shadow: 0 0 30px rgba(255, 105, 180, 0.25);
+}
+
+.login-container h1 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.login-container p {
+    margin-bottom: 25px;
+}
+
+#login-form input {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 18px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.12);
+    color: white;
+    font-size: 1rem;
+    outline: none;
+}
+
+#login-form input::placeholder {
+    color: #f5c9e8;
+}
+
+#login-form button {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 12px;
+    background: linear-gradient(90deg, #ff65b3, #b34de0);
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+#login-form button:hover {
+    transform: scale(1.04);
+}
+
+#login-message {
+    margin-top: 18px;
+    font-size: 0.95rem;
+}
+
+#memories-screen {
+    width: 90%;
+    max-width: 700px;
+    margin: 30px auto;
+    text-align: center;
+    animation: fadeIn 1.5s ease;
+}
+
+.memory-card {
+    margin: 30px auto;
+    padding: 15px;
+    max-width: 400px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.12);
+    box-shadow: 0 0 25px rgba(255, 105, 180, 0.4);
+}
+
+.memory-card img {
+    width: 100%;
+    border-radius: 15px;
+    border: 2px solid #ff9bd6;
+    display: block;
+}
+
+.memory-card p {
+    margin-top: 15px;
+    color: #ffd6ed;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#love-letter-screen {
+    width: 90%;
+    max-width: 650px;
+    margin: 30px auto;
+    text-align: center;
+    animation: fadeIn 1.5s ease;
+}
+
+#envelope {
+    margin: 40px auto;
+    padding: 35px;
+    max-width: 300px;
+    font-size: 5rem;
+    cursor: pointer;
+    border-radius: 20px;
+    background: rgba(255,255,255,.15);
+    box-shadow: 0 0 30px rgba(255,105,180,.5);
+    animation: heartbeat 1.5s infinite;
+}
+
+#envelope p {
+    font-size: 1rem;
+}
+
+@keyframes heartbeat {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.08); }
+}
+
+#letter-content {
+    padding: 25px;
+    margin: 20px auto;
+    border-radius: 20px;
+    background: rgba(255,255,255,.15);
+    box-shadow: 0 0 30px rgba(255,105,180,.4);
+}
+
+#letter-content p {
+    margin: 20px 0;
+    line-height: 1.8;
+}
+
+#final-surprise-screen {
+    width: 90%;
+    max-width: 650px;
+    margin: 30px auto;
+    text-align: center;
+    animation: fadeIn 1.5s ease;
+}
+
+#gift-box {
+    margin: 40px auto;
+    padding: 40px;
+    max-width: 300px;
+    font-size: 6rem;
+    cursor: pointer;
+    border-radius: 25px;
+    background: rgba(255,255,255,.15);
+    box-shadow: 0 0 35px rgba(255,105,180,.6);
+    animation: heartbeat 1.5s infinite;
+}
+
+#gift-box p {
+    font-size: 1rem;
+}
+
+#gift-message {
+    padding: 25px;
+    margin: 20px auto;
+    border-radius: 20px;
+    background: rgba(255,255,255,.15);
+    box-shadow: 0 0 35px rgba(255,105,180,.5);
+}
+
+#gift-message p {
+    margin: 20px 0;
+    line-height: 1.8;
+}
+
+#replay-button,
+#final-surprise-button {
+    padding: 15px 25px;
+    margin: 20px;
+    border: none;
+    border-radius: 12px;
+    background: linear-gradient(90deg,#ff65b3,#b34de0);
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+}

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somewhere Only You Belong ❤️</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="login-container">
+    <h1>Somewhere Only You Belong ❤️</h1>
+
+    <p>A little world made just for you...</p>
+
+    <form id="login-form">
+        <input
+            type="email"
+            id="email"
+            placeholder="Your secret email"
+            required
+        >
+
+        <input
+            type="password"
+            id="password"
+            placeholder="Your secret password"
+            required
+        >
+
+        <button type="submit">Unlock My Surprise 💜</button>
+
+        <p id="login-message"></p>
+    </form>
+</div>
+<audio id="birthday-music" loop>
+    <source src="Tum-Se-Hi.mp3.mpeg" type="audio/mpeg">
+</audio>
+
+<button id="music-toggle" style="display: none;">
+    🔊 Music ON
+</button>
+<div id="welcome-screen" style="display: none;">
+
+    <h1>Welcome, My Love ❤️</h1>
+
+    <p>A little world made just for you...</p>
+
+    <button id="surprise-button">
+        Open Your Birthday Surprise 💜
+    </button>
+
+</div>
+
+<div id="surprise-screen" style="display: none;">
+
+    <h1>Happy Birthday, My Love! 🎂❤️</h1>
+
+    <p>Today is all about you.</p>
+
+    <p>You make my world more beautiful.</p>
+
+    <div class="cake">
+        <div class="candles" id="candles">🕯️ 🕯️ 🕯️</div>
+        <div class="cake-top"></div>
+        <div class="cake-body">🎂</div>
+    </div>
+
+    <button id="blow-button">
+        Blow Out Your Candles 💨
+    </button>
+
+    <h2 id="birthday-message" style="display: none;">
+        Make a wish, my love! ❤️✨
+    </h2>
+    <button id="memories-button" style="display: none;">
+    See Our Beautiful Memories ❤️
+</button>
+
+<div id="memories-screen" style="display: none;">
+
+    <h1>Our Beautiful Memories 💕</h1>
+
+    <p>Every moment with you is special.</p>
+
+    <div id="photo-gallery"></div>
+    <button id="letter-button">
+    Read My Special Letter 💌
+</button>
+
+</div>
+<div id="love-letter-screen" style="display: none;">
+    <h1>A Little Letter For You 💌</h1>
+    <p>Something special, written from my heart.</p>
+
+    <div id="envelope" onclick="openLoveLetter()">
+        💌
+        <p>Tap to open your letter</p>
+    </div>
+
+    <div id="letter-content" style="display: none;">
+        <h2>My Love ❤️</h2>
+
+        <p>
+            Happy Birthday to the most beautiful person in my world!
+            I love your smile, your eyes, your caring nature,
+            and every little thing that makes you who you are.
+        </p>
+
+        <p>
+            You make my ordinary days special.
+            Your presence brings happiness into my life.
+        </p>
+
+        <p>
+            I promise to stand beside you, support you,
+            understand you, and keep choosing you.
+        </p>
+
+        <p>
+            No matter what life brings, I want us to grow together,
+            laugh together, and create countless beautiful memories.
+        </p>
+
+        <h3>I love you, My Love. Today, tomorrow, and always. ❤️</h3>
+        <p>Forever yours. 💜</p>
+        <button id="final-surprise-button">
+    Open Your Final Surprise 🎁❤️
+</button>
+    </div>
+</div>
+<div id="final-surprise-screen" style="display: none;">
+    <h1>One Last Surprise, My Love! ❤️</h1>
+
+    <div id="gift-box" onclick="openGift()">
+        🎁
+        <p>Tap to open your gift 💜</p>
+    </div>
+
+    <div id="gift-message" style="display: none;">
+        <h2>You Are My Favourite Gift! ❤️</h2>
+        <p>
+            No gift in this world could ever be more precious
+            than having you in my life.
+        </p>
+        <h1>Forever & Always 💕</h1>
+
+        <button id="replay-button">
+            Relive Our Beautiful Surprise 🔄
+        </button>
+    </div>
+</div>
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="script.js"></script>
+</body>
+</html>
